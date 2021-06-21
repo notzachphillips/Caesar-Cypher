@@ -1,4 +1,4 @@
-# Caesar-Cypher
+# Caesar-Cipher
 A caesar cipher! This will encode a block of text by swapping each character with another character along a set interval, i
 
 With this code, you should be able to paste any block of text on line 27 (or between the triple parenthesis) and change the number on line 32 in order to encode the block of text with a caesar cipher, according to the number you chose to input. It removes all spaces and punctuation, as well as changing all capitals to lower case. This produces a long string of text, which makes it extra confusing (as a cipher should be!)
