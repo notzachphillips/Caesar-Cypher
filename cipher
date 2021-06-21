@@ -1,0 +1,33 @@
+characters = "abcdefghijklmnopqrstuvwxyz"
+
+#this should assign letters number values, up to 26
+def number_letter(i):
+  return characters[i%26] #this should make it wrap back around (if cipher is +5, then z would become e, instead of an imaginary 31st letter)
+  
+def letter_number(1):
+  return characters.find(1) #this indexes the characters
+
+#how the encoding works
+def caesar_shift_single_character(1, amount):
+  i = letter_number(1)
+  if i == -1: #means the character is not found. this should include spaces, punctuation marks, etc
+    return "" #removes the character
+  else:
+    return number_letter(i + amount) #this is the shift that makes it a cipher!
+
+#this is where we'll encode a block of text
+def caesar_shift(text, amount):
+  shifted_text = ""
+  for char in text.lower(): #makes sure that everything will be in lower case
+    shifted_text += caesar_shift_single_character(char, amount)
+  return shifted_text
+  
+##enter your block of text below, between the triple parenthesis##
+message = """
+This cosmic dance of bursting decadence and withheld permissions, 
+twists all our arms collectively, but if sweetness can win, and it can, 
+then I'll still be here tomorrow to high-five you yesterday, my friend.
+"""
+
+code = caesar_shift(message, 10) #this is where you decide what interval with which encode the cipher 
+print(code)
